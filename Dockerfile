@@ -16,5 +16,5 @@ RUN echo "su -l -c 'vncserver :2000 -geometry 1360x768' "  >>/run.sh
 RUN echo 'cd /noVNC-1.2.0' >>/run.sh
 RUN echo './utils/launch.sh  --vnc localhost:7900 --listen 8900 ' >>/run.sh
 RUN chmod 755 /run.sh
-EXPOSE 8900
+EXPOSE 8900 443 80
 CMD  /run.sh 
